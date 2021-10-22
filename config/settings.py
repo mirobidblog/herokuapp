@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-r4!22er!xy!^zu$rhya6rg!p0d79(0^kdu%d9kds)(e-7+$k^=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -156,3 +156,6 @@ REST_FRAMEWORK = {
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' #new 
 SITE_ID = 1
+
+import django_heroku
+django_heroku.settings(locals())
